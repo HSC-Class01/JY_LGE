@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.py[cod]
+data/raw/
+data/xbrl/
+reports/source/
+site/

@@ -1,0 +1,63 @@
+name: Update OpenDART data and deploy dashboard
+
+on:
+  schedule:
+    - cron: "0 0 1 * *" # 매월 1일 09:00 KST
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "dashboard-config.js"
+      - "data/**"
+      - "scripts/**"
+      - "config/**"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch new OpenDART filings
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: |
+          python scripts/fetch_opendart.py --start-year 2010
+          python scripts/analyze.py
+          python -m unittest discover -s tests -v
+      - name: Commit newly published data
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data reports
+          git diff --cached --quiet || git commit -m "data: update OpenDART filings"
+          git push
+      - uses: actions/configure-pages@v5
+      - name: Prepare public dashboard artifact
+        run: |
+          mkdir -p site/data
+          cp index.html dashboard-config.js site/
+          cp data/dashboard.json site/data/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

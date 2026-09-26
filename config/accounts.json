@@ -1,0 +1,23 @@
+{
+  "revenue": {"label": "매출액", "statement": "IS", "names": ["매출액", "수익(매출액)", "영업수익"], "ids": ["ifrs-full_Revenue", "ifrs-full_RevenueFromContractsWithCustomers", "dart_OperatingRevenue"]},
+  "cost_of_sales": {"label": "매출원가", "statement": "IS", "names": ["매출원가"], "ids": ["ifrs-full_CostOfSales"]},
+  "gross_profit": {"label": "매출총이익", "statement": "IS", "names": ["매출총이익", "매출총이익(손실)"], "ids": ["ifrs-full_GrossProfit"]},
+  "operating_income": {"label": "영업이익", "statement": "IS", "names": ["영업이익", "영업이익(손실)"], "ids": ["dart_OperatingIncomeLoss", "ifrs-full_ProfitLossFromOperatingActivities"]},
+  "profit_before_tax": {"label": "법인세비용차감전순이익", "statement": "IS", "names": ["법인세비용차감전순이익", "법인세비용차감전순이익(손실)"], "ids": ["ifrs-full_ProfitLossBeforeTax"]},
+  "net_income": {"label": "당기순이익", "statement": "IS", "names": ["당기순이익", "당기순이익(손실)", "연결당기순이익"], "ids": ["ifrs-full_ProfitLoss"]},
+  "current_assets": {"label": "유동자산", "statement": "BS", "names": ["유동자산"], "ids": ["ifrs-full_CurrentAssets"]},
+  "total_assets": {"label": "자산총계", "statement": "BS", "names": ["자산총계"], "ids": ["ifrs-full_Assets"]},
+  "cash_and_cash_equivalents": {"label": "현금및현금성자산", "statement": "BS", "names": ["현금및현금성자산"], "ids": ["ifrs-full_CashAndCashEquivalents"]},
+  "accounts_receivable": {"label": "매출채권", "statement": "BS", "names": ["매출채권", "매출채권및기타채권", "매출채권 및 기타채권"], "ids": ["ifrs-full_TradeAndOtherCurrentReceivables", "ifrs-full_TradeReceivables"]},
+  "inventory": {"label": "재고자산", "statement": "BS", "names": ["재고자산"], "ids": ["ifrs-full_Inventories"]},
+  "current_liabilities": {"label": "유동부채", "statement": "BS", "names": ["유동부채"], "ids": ["ifrs-full_CurrentLiabilities"]},
+  "total_liabilities": {"label": "부채총계", "statement": "BS", "names": ["부채총계"], "ids": ["ifrs-full_Liabilities"]},
+  "total_equity": {"label": "자본총계", "statement": "BS", "names": ["자본총계"], "ids": ["ifrs-full_Equity"]},
+  "short_term_borrowings": {"label": "단기차입금", "statement": "BS", "names": ["단기차입금", "단기차입금및유동성장기부채"], "ids": ["ifrs-full_ShorttermBorrowings"]},
+  "long_term_borrowings": {"label": "장기차입금", "statement": "BS", "names": ["장기차입금"], "ids": ["ifrs-full_LongtermBorrowings"]},
+  "operating_cash_flow": {"label": "영업활동현금흐름", "statement": "CF", "names": ["영업활동으로인한현금흐름", "영업활동현금흐름"], "ids": ["ifrs-full_CashFlowsFromUsedInOperatingActivities"]},
+  "investing_cash_flow": {"label": "투자활동현금흐름", "statement": "CF", "names": ["투자활동으로인한현금흐름", "투자활동현금흐름"], "ids": ["ifrs-full_CashFlowsFromUsedInInvestingActivities"]},
+  "financing_cash_flow": {"label": "재무활동현금흐름", "statement": "CF", "names": ["재무활동으로인한현금흐름", "재무활동현금흐름"], "ids": ["ifrs-full_CashFlowsFromUsedInFinancingActivities"]},
+  "capex_ppe": {"label": "유형자산 취득", "statement": "CF", "names": ["유형자산의취득", "유형자산 취득"], "ids": ["ifrs-full_PurchaseOfPropertyPlantAndEquipment"]},
+  "capex_intangibles": {"label": "무형자산 취득", "statement": "CF", "names": ["무형자산의취득", "무형자산 취득"], "ids": ["ifrs-full_PurchaseOfIntangibleAssets"]}
+}

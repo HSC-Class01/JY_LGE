@@ -1,0 +1,22 @@
+OpenDART API 인증키 입력 안내
+============================
+
+1. https://opendart.fss.or.kr/ 에 로그인하여 인증키를 신청합니다.
+2. 로컬 실행:
+   - env.example.txt를 같은 폴더의 .env라는 이름으로 복사합니다.
+   - DART_API_KEY= 뒤에 40자리 인증키를 붙여 넣습니다.
+   - .env 파일은 절대로 GitHub에 업로드하지 않습니다.
+3. GitHub 자동 실행:
+   - 저장소 Settings > Secrets and variables > Actions로 이동합니다.
+   - New repository secret을 누릅니다.
+   - Name: DART_API_KEY
+   - Secret: 발급받은 40자리 인증키
+4. Actions > Update OpenDART data and deploy dashboard > Run workflow를 한 번 실행합니다.
+
+로컬 실행 명령
+--------------
+python scripts/fetch_opendart.py --start-year 2010
+python scripts/analyze.py
+python -m http.server 8000
+
+브라우저에서 http://localhost:8000 을 엽니다.

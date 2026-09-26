@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "company": "LG전자",
+  "stock_code": "066570",
+  "corp_code": "00401731",
+  "basis": "OpenDART API 키 등록 후 첫 자동 수집에서 실제 데이터로 교체됩니다.",
+  "updated_at": null,
+  "source": {
+    "provider": "OpenDART",
+    "rss_url": "https://dart.fss.or.kr/api/companyRSS.xml?crpCd=00401731",
+    "report_url": "https://dart.fss.or.kr/dsab002/main.do?autoSearch=true&textCrpCik=00401731"
+  },
+  "account_labels": {},
+  "financials": [],
+  "ratios": [],
+  "annual_financials": [],
+  "annual_ratios": [],
+  "filings": []
+}
