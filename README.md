@@ -16,11 +16,12 @@ LG전자(종목코드 `066570`, DART 고유번호 `00401731`)의 2010년 이후 
 ## 처음 설정하기
 
 1. [OpenDART](https://opendart.fss.or.kr/)에서 40자리 API 인증키를 발급합니다.
-2. ZIP을 풀고 PowerShell에서 `./install_github_workflow.ps1`을 실행합니다. 배포 ZIP에는 숨김 폴더가 없으므로 이 스크립트가 `github-workflows`의 파일을 GitHub 표준 위치인 `.github/workflows`로 복사합니다.
-3. 준비된 저장소 [`HSC-Class01/JY_LGE`](https://github.com/HSC-Class01/JY_LGE)에 이 폴더의 내용을 업로드합니다. GitHub CLI를 사용한다면 `./publish_to_github.ps1`로 푸시와 About 링크 설정을 한 번에 할 수 있습니다.
-4. 저장소 **Settings → Secrets and variables → Actions → New repository secret**에서 이름을 `DART_API_KEY`로 지정하고 인증키를 입력합니다.
-5. **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 선택합니다.
-6. **Actions → Update OpenDART data and deploy dashboard → Run workflow**를 한 번 실행합니다.
+2. 권장 파일인 `JY_LGE_GitHub_Ready.zip`을 풀어 Git으로 푸시합니다. 이 파일에는 Actions 필수 경로인 `.github/workflows/update-and-deploy.yml`이 들어 있습니다.
+3. 숨김 파일이 없는 `JY_LGE.zip`을 사용한다면, 압축을 푼 뒤 반드시 PowerShell에서 `./install_github_workflow.ps1`을 실행하고 나서 푸시해야 합니다. GitHub 웹 업로드만 사용했다면 저장소에서 **Add file → Create new file**을 선택하고 파일명을 `.github/workflows/update-and-deploy.yml`로 만들어 `github-workflows/update-and-deploy.yml`의 내용을 복사하세요.
+4. 준비된 저장소 [`HSC-Class01/JY_LGE`](https://github.com/HSC-Class01/JY_LGE)에 파일을 푸시합니다. GitHub CLI를 사용한다면 `./publish_to_github.ps1`로 푸시와 About 링크 설정을 한 번에 할 수 있습니다.
+5. 저장소 **Settings → Secrets and variables → Actions → New repository secret**에서 이름을 `DART_API_KEY`로 지정하고 인증키를 입력합니다.
+6. **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 선택합니다.
+7. **Actions → Update OpenDART data and deploy dashboard → Run workflow**를 한 번 실행합니다.
 
 상세한 키 입력 방법은 `API_KEY_SETUP.txt`에 있습니다. 인증키는 저장소 파일이나 ZIP에 포함하지 마세요.
 
@@ -56,6 +57,7 @@ python -m http.server 8000 -d dist
 - `data/xbrl/`: 사업보고서 XBRL 원본 ZIP
 - `reports/source/`: DART 사업보고서 원문 ZIP
 - `github-workflows/update-and-deploy.yml`: 숨김 파일 없는 ZIP용 Actions 템플릿
+- `.github/workflows/update-and-deploy.yml`: GitHub가 실제 실행하는 Actions 워크플로
 
 ## 데이터 해석 주의
 
