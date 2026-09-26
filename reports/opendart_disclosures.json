@@ -1,0 +1,230 @@
+{
+  "company": {
+    "name": "LG전자",
+    "corp_code": "00401731",
+    "stock_code": "066570"
+  },
+  "source_rss": "https://dart.fss.or.kr/api/companyRSS.xml?crpCd=00401731",
+  "filings": [
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2009.12)",
+      "rcept_no": "20100331001406",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20100331",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2010.12)",
+      "rcept_no": "20110331002250",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20110331",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2011.12)",
+      "rcept_no": "20120330001022",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20120330",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2012.12)",
+      "rcept_no": "20130329000281",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20130329",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2013.12)",
+      "rcept_no": "20140331002734",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20140331",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2014.12)",
+      "rcept_no": "20150331003966",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20150331",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2015.12)",
+      "rcept_no": "20160330003806",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20160330",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2016.12)",
+      "rcept_no": "20170331003661",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20170331",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2017.12)",
+      "rcept_no": "20180402003670",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20180402",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2018.12)",
+      "rcept_no": "20190401004344",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20190401",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2019.12)",
+      "rcept_no": "20200330004430",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20200330",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "[첨부정정]사업보고서 (2020.12)",
+      "rcept_no": "20210316001210",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20210316",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2020.12)",
+      "rcept_no": "20210316000661",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20210316",
+      "rm": "정연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "[기재정정]사업보고서 (2021.12)",
+      "rcept_no": "20220316000886",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20220316",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2021.12)",
+      "rcept_no": "20220316000440",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20220316",
+      "rm": "정연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2022.12)",
+      "rcept_no": "20230317000955",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20230317",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2023.12)",
+      "rcept_no": "20240318000755",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20240318",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2024.12)",
+      "rcept_no": "20250317001029",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20250317",
+      "rm": "연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "사업보고서 (2025.12)",
+      "rcept_no": "20260313000662",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20260313",
+      "rm": "정연"
+    },
+    {
+      "corp_code": "00401731",
+      "corp_name": "LG전자",
+      "stock_code": "066570",
+      "corp_cls": "Y",
+      "report_nm": "[기재정정]사업보고서 (2025.12)",
+      "rcept_no": "20260706000276",
+      "flr_nm": "LG전자",
+      "rcept_dt": "20260706",
+      "rm": "연"
+    }
+  ]
+}
