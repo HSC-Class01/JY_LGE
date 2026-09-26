@@ -116,20 +116,26 @@ def business_year(filing: dict) -> int:
     return int(filing.get("rcept_dt", "0000")[:4]) - 1
 
 
-def download_archives(key: str, filings: list[dict]) -> None:
+def download_archives(key: str, filings: list[dict]) -> list[str]:
     target = ROOT / "reports" / "source"
     target.mkdir(parents=True, exist_ok=True)
+    warnings = []
     for filing in filings:
         receipt = filing["rcept_no"]
         archive = target / f"{receipt}.zip"
         if archive.exists():
             continue
         url = f"{API}/document.xml?{urlencode({'crtfc_key': key, 'rcept_no': receipt})}"
-        with urlopen(Request(url, headers={"User-Agent": "LGE-DART-Agent/1.0"}), timeout=120) as response:
-            payload = response.read()
-        if payload[:2] != b"PK":
-            raise RuntimeError(f"{receipt}: 사업보고서 원문 ZIP 다운로드 실패")
-        archive.write_bytes(payload)
+        try:
+            with urlopen(Request(url, headers={"User-Agent": "LGE-DART-Agent/1.0"}), timeout=120) as response:
+                payload = response.read()
+            if payload[:2] == b"PK":
+                archive.write_bytes(payload)
+            else:
+                warnings.append(f"{receipt}: 사업보고서 원문 ZIP 없음")
+        except (HTTPError, URLError, TimeoutError) as error:
+            warnings.append(f"{receipt}: 사업보고서 원문 ZIP 다운로드 실패({error})")
+    return warnings
 
 
 def download_xbrl_archives(key: str, filings: list[dict]) -> list[str]:
@@ -282,7 +288,7 @@ def main() -> None:
         "filings": annual,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     if not args.skip_report_archives:
-        download_archives(key, annual)
+        warnings.extend(download_archives(key, annual))
         warnings.extend(download_xbrl_archives(key, annual))
     legacy_by_year = {}
     for filing in annual:

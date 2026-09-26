@@ -1,10 +1,11 @@
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from unittest.mock import patch
 from zipfile import ZipFile
 
 from scripts.analyze import calculate
-from scripts.fetch_opendart import business_year, parse_xbrl_annual
+from scripts.fetch_opendart import business_year, download_archives, parse_xbrl_annual
 
 
 class RatioTests(unittest.TestCase):
@@ -53,6 +54,25 @@ class RatioTests(unittest.TestCase):
             row, warnings = parse_xbrl_annual(archive, 2013, fields)
         self.assertEqual(warnings, [])
         self.assertEqual(row["revenue"], 100)
+
+    def test_report_archive_failure_is_warning_not_fatal(self):
+        class Response:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_):
+                return False
+
+            def read(self):
+                return b'{"status":"014","message":"file missing"}'
+
+        filing = {"rcept_no": "20210316001210"}
+        with TemporaryDirectory() as directory, \
+                patch("scripts.fetch_opendart.ROOT", Path(directory)), \
+                patch("scripts.fetch_opendart.urlopen", return_value=Response()):
+            warnings = download_archives("test-key", [filing])
+        self.assertEqual(len(warnings), 1)
+        self.assertIn("20210316001210", warnings[0])
 
 
 if __name__ == "__main__":
